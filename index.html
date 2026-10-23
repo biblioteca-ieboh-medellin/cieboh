@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Seguridad: GitHub Pages no permite cabeceras HTTP propias, por eso la CSP va en <meta>.
+    Todo bloqueado por defecto; solo se permite lo propio del sitio y Google Fonts.
+    Trusted Types impide asignar HTML como texto en sumideros peligrosos (innerHTML, etc.).
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; manifest-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; require-trusted-types-for 'script'; trusted-types 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Centro de Investigación Escolar BOH</title>
+  <meta name="description" content="Centro de Investigación Escolar de la Institución Educativa Barrio Olaya Herrera (Medellín): estructura EDS, líneas de investigación, semilleros, media técnica y repositorio de formatos.">
+  <meta name="theme-color" content="#1b4332">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Solo los pesos tipográficos que usa el diseño -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,600..800;1,800&family=JetBrains+Mono:wght@500..700&family=Public+Sans:wght@400..700&display=swap">
+  <!-- Íconos: subconjunto con únicamente los 75 glifos usados (icon_names en orden alfabético) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=accessibility_new,account_balance,account_tree,air,arrow_forward,arrow_outward,assignment,assignment_turned_in,auto_stories,biotech,bubble_chart,call,campaign,check_circle,clinical_notes,close,compost,contact_support,description,diversity_1,diversity_3,download,eco,edit_document,emoji_events,error,event_available,explore,extension,favorite,filter_list,flag,folder_special,forest,groups,groups_3,handshake,history_edu,how_to_vote,hub,info,library_music,lightbulb,location_on,mail,map,menu,menu_book,merge,military_tech,nest_eco_leaf,north_east,potted_plant,precision_manufacturing,psychology,psychology_alt,public,record_voice_over,schedule,schema,school,science,settings_suggest,smart_toy,south,supervisor_account,support_agent,translate,travel_explore,trending_up,verified,verified_user,visibility,water_drop,yard&display=block">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <!-- Precarga de módulos: evita la cascada de peticiones import → import -->
+  <link rel="modulepreload" href="js/config/app.config.js">
+  <link rel="modulepreload" href="js/data/documentos.data.js">
+  <link rel="modulepreload" href="js/data/semilleros.data.js">
+  <link rel="modulepreload" href="js/core/dom.js">
+  <link rel="modulepreload" href="js/core/safe-url.js">
+  <link rel="modulepreload" href="js/services/notifier.js">
+  <link rel="modulepreload" href="js/components/navigation.js">
+  <link rel="modulepreload" href="js/components/scroll-spy.js">
+  <link rel="modulepreload" href="js/components/modal.js">
+  <link rel="modulepreload" href="js/components/semilleros.js">
+  <link rel="modulepreload" href="js/components/documents.js">
+  <link rel="modulepreload" href="js/components/external-links.js">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="site-header" data-component="header">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <span class="topbar__org">
+          <span class="icon icon--sm" aria-hidden="true">account_balance</span>
+          Institución Educativa Barrio Olaya Herrera • Medellín, Colombia
+        </span>
+        <a class="topbar__link" href="https://iebarrioolayaherrera.edu.co" target="_blank" rel="noopener noreferrer">
+          Portal Institucional Principal
+          <span class="icon icon--sm" aria-hidden="true">north_east</span>
+          <span class="visually-hidden">(se abre en una pestaña nueva)</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container navbar">
+      <a class="brand" href="#inicio" aria-label="Centro de Investigación BOH, ir al inicio">
+        <img class="brand__logo" src="assets/img/logo.svg" alt="" width="40" height="40">
+        <span class="brand__text">
+          <span class="brand__name">Centro de Investigación BOH</span>
+          <span class="brand__tagline">IE Barrio Olaya Herrera • Excelencia y Ciencia</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+        <span class="icon" aria-hidden="true" data-nav-toggle-icon>menu</span>
+        <span class="visually-hidden" data-nav-toggle-label>Abrir menú</span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegación principal" data-nav>
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="#inicio" data-spy-link>Inicio</a></li>
+          <li><a class="main-nav__link" href="#pei-fundamentos" data-spy-link>Generalidades</a></li>
+          <li><a class="main-nav__link" href="#eds-flujo" data-spy-link>Estructura (EDS)</a></li>
+          <li><a class="main-nav__link" href="#lineas-investigacion" data-spy-link>Líneas de Investigación</a></li>
+          <li><a class="main-nav__link" href="#semilleros-media" data-spy-link>Semilleros &amp; Media Técnica</a></li>
+          <li><a class="main-nav__link" href="#repositorio" data-spy-link>Repositorio &amp; Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <!-- Barra de anclas rápida (escritorio) -->
+    <div class="anchor-hub" aria-label="Accesos rápidos">
+      <div class="container anchor-hub__inner">
+        <p class="anchor-hub__status">
+          <span class="mono anchor-hub__version">
+            <span class="icon icon--sm" aria-hidden="true">account_tree</span> CIE-BOH v2025.1
+          </span>
+          <span aria-hidden="true">•</span>
+          Estructura Desenglobante del Trabajo (EDS) Activa
+        </p>
+        <ul class="anchor-hub__links">
+          <li><a href="#pei-fundamentos"><span class="icon icon--sm" aria-hidden="true">school</span>Marco PEI</a></li>
+          <li><a href="#eds-flujo"><span class="icon icon--sm" aria-hidden="true">schema</span>Ruta Metodológica EDS</a></li>
+          <li><a href="#lineas-investigacion"><span class="icon icon--sm" aria-hidden="true">biotech</span>Líneas de Territorio</a></li>
+          <li><a href="#semilleros-media"><span class="icon icon--sm" aria-hidden="true">psychology</span>Semilleros &amp; Media Técnica</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero section" id="inicio" aria-labelledby="hero-title" data-spy-section>
+      <div class="hero__glow hero__glow--right" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--left" aria-hidden="true"></div>
+
+      <div class="container stack-xl">
+        <ul class="badge-row" aria-label="Enfoque pedagógico">
+          <li class="badge badge--solid"><span class="icon icon--sm" aria-hidden="true">psychology</span>Modelo Social Constructivista</li>
+          <li class="badge badge--mint"><span class="icon icon--sm" aria-hidden="true">explore</span>Aprender Descubriendo</li>
+          <li class="badge badge--neutral"><span class="icon icon--sm badge__icon--terracotta" aria-hidden="true">bubble_chart</span>Metodologías Activas: ABP • ABR • Pregunta Problematizadora</li>
+        </ul>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow eyebrow--rule">Organigrama Científico Escolar</p>
+            <h1 class="display" id="hero-title">El Ser como Centro de la <em class="accent">Investigación Escolar</em></h1>
+            <p class="lead">
+              Centro de Investigación BOH de la <strong>Institución Educativa Barrio Olaya Herrera</strong>. Un ecosistema pedagógico donde la curiosidad se transforma en rigor científico, soberanía comunitaria y acción colectiva para el territorio de Robledo y Medellín.
+            </p>
+            <div class="button-row">
+              <a class="btn btn--primary" href="#eds-flujo">Explorar Estructura EDS <span class="icon icon--sm btn__nudge" aria-hidden="true">south</span></a>
+              <a class="btn btn--soft" href="#lineas-investigacion">Líneas de Territorio <span class="icon icon--sm" aria-hidden="true">travel_explore</span></a>
+              <a class="btn btn--amber-soft" href="#repositorio"><span class="icon icon--sm" aria-hidden="true">folder_special</span> Guías y Formatos</a>
+            </div>
+          </div>
+
+          <figure class="emblem">
+            <figcaption class="emblem__head">
+              <span class="emblem__title"><span class="icon icon--sm text-mint" aria-hidden="true">hub</span>Matriz PEI Olavista</span>
+              <span class="tag-mono">2025</span>
+            </figcaption>
+            <svg class="emblem__diagram" viewBox="0 0 320 220" role="img" aria-labelledby="emblem-desc">
+              <title id="emblem-desc">Diagrama del PEI: el Ser en el centro, conectado con la curiosidad, el liderazgo y las ramas EDS, Media Técnica y Ciencia.</title>
+              <path class="dg-line dg-line--dashed" d="M160 44 L160 80" />
+              <path class="dg-line dg-line--mint" d="M70 101 L90 101" />
+              <path class="dg-line dg-line--amber" d="M230 101 L250 101" />
+              <path class="dg-line" d="M160 122 L160 160 M80 160 L240 160 M80 160 L80 164 M160 160 L160 164 M240 160 L240 164" />
+              <rect class="dg-fill-primary" x="90" y="80" width="140" height="42" rx="8" />
+              <text class="dg-text dg-text--white dg-text--bold" x="160" y="106" text-anchor="middle">EL SER EN EL CENTRO</text>
+              <rect class="dg-fill-secondary" x="115" y="10" width="90" height="34" rx="17" />
+              <text class="dg-text dg-text--white dg-text--mono" x="160" y="32" text-anchor="middle">PEI BOH</text>
+              <rect class="dg-fill-mint" x="10" y="85" width="60" height="32" rx="6" />
+              <text class="dg-text dg-text--sm" x="40" y="105" text-anchor="middle">Curiosidad</text>
+              <rect class="dg-fill-amber" x="250" y="85" width="60" height="32" rx="6" />
+              <text class="dg-text dg-text--sm dg-text--brown" x="280" y="105" text-anchor="middle">Liderazgo</text>
+              <circle class="dg-fill-high" cx="80" cy="180" r="16" />
+              <text class="dg-text dg-text--sm" x="80" y="184" text-anchor="middle">EDS</text>
+              <circle class="dg-fill-primary" cx="160" cy="180" r="16" />
+              <text class="dg-text dg-text--sm dg-text--white" x="160" y="184" text-anchor="middle">MEDIA</text>
+              <circle class="dg-fill-secondary-soft" cx="240" cy="180" r="16" />
+              <text class="dg-text dg-text--xs dg-text--green" x="240" y="184" text-anchor="middle">CIENCIA</text>
+            </svg>
+            <div class="emblem__foot">
+              <span><span class="icon icon--sm text-mint" aria-hidden="true">diversity_3</span>Comunidad Educativa</span>
+              <span class="mono text-secondary">Transición a 11°</span>
+            </div>
+          </figure>
+        </div>
+
+        <ul class="metrics" aria-label="Indicadores de impacto">
+          <li class="metric">
+            <div class="metric__head text-secondary"><span class="icon icon--md" aria-hidden="true">science</span><span class="mono">Fase 2025</span></div>
+            <span class="metric__value">+18</span>
+            <span class="metric__label">Proyectos Activos de Aula</span>
+          </li>
+          <li class="metric">
+            <div class="metric__head text-amber"><span class="icon icon--md" aria-hidden="true">potted_plant</span><span class="mono">Semilleros</span></div>
+            <span class="metric__value" data-metric="semilleros">4</span>
+            <span class="metric__label">Semilleros Vocacionales BOH</span>
+          </li>
+          <li class="metric">
+            <div class="metric__head text-mint"><span class="icon icon--md" aria-hidden="true">public</span><span class="mono">Territorio</span></div>
+            <span class="metric__value">2</span>
+            <span class="metric__label">Líneas de Transformación Local</span>
+          </li>
+          <li class="metric">
+            <div class="metric__head text-primary"><span class="icon icon--md" aria-hidden="true">handshake</span><span class="mono">Articulación</span></div>
+            <span class="metric__value">100%</span>
+            <span class="metric__label">Media Técnica &amp; Proyectos Mentores</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== GENERALIDADES / PEI ===================== -->
+    <section class="section section--surface" id="pei-fundamentos" aria-labelledby="pei-title" data-spy-section>
+      <div class="container stack-2xl">
+        <header class="section-head">
+          <div class="section-head__copy">
+            <p class="eyebrow">Fundamentación Pedagógica</p>
+            <h2 class="headline-lg" id="pei-title">Horizonte Institucional &amp; Marco PEI Olavista</h2>
+            <p class="text-muted">La investigación en la Institución Educativa Barrio Olaya Herrera no es un fin en sí misma; es la palanca formadora que ubica a los niños, niñas y jóvenes en el epicentro de su aprendizaje.</p>
+          </div>
+          <p class="pill-note"><span class="icon icon--sm text-primary" aria-hidden="true">verified_user</span>Acreditación Institucional IE Barrio Olaya Herrera</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="card card--padded card--split">
+            <div class="stack-md">
+              <span class="icon-tile icon-tile--mint"><span class="icon icon--lg" aria-hidden="true">flag</span></span>
+              <h3 class="headline-sm">Misión Formativa</h3>
+              <p class="text-muted">Fomentar el pensamiento crítico, la curiosidad científica y la capacidad de transformación social en la comunidad olavista, a través de metodologías activas y la investigación formativa contextualizada en su territorio.</p>
+            </div>
+            <p class="card__foot"><span class="icon icon--sm" aria-hidden="true">check_circle</span>Formación Holística Ciudadana</p>
+          </article>
+
+          <article class="card card--padded card--split">
+            <div class="stack-md">
+              <span class="icon-tile icon-tile--high"><span class="icon icon--lg" aria-hidden="true">visibility</span></span>
+              <h3 class="headline-sm">Visión Prospectiva</h3>
+              <p class="text-muted">Consolidar al Centro de Investigación Escolar BOH como un polo de innovación educativa y divulgación científica en Medellín para 2030, donde cada estudiante egrese con competencias investigativas de alto impacto real.</p>
+            </div>
+            <p class="card__foot"><span class="icon icon--sm" aria-hidden="true">trending_up</span>Liderazgo Científico en Robledo</p>
+          </article>
+
+          <article class="card card--padded card--split card--inverse">
+            <div class="stack-md">
+              <span class="icon-tile icon-tile--mint-bright"><span class="icon icon--lg" aria-hidden="true">groups_3</span></span>
+              <h3 class="headline-sm">Aula de Apoyo &amp; Inclusión</h3>
+              <p>Garantizamos la articulación de los Modelos Flexibles y el Aula de Apoyo pedagógico, permitiendo que la ciencia y la indagación sean inclusivas, diversas y accesibles para todos los ritmos y talentos escolares.</p>
+            </div>
+            <p class="card__foot"><span class="icon icon--sm" aria-hidden="true">accessibility_new</span>Diversidad, Equidad y Cobertura</p>
+          </article>
+        </div>
+
+        <div class="panel stack-lg">
+          <div class="stack-xs">
+            <p class="eyebrow eyebrow--primary"><span class="icon" aria-hidden="true">psychology_alt</span>Estructura por Niveles Educativos</p>
+            <h3 class="headline-md">Despliegue del Organigrama: De la Curiosidad Inicial al Liderazgo Productivo</h3>
+            <p class="text-muted measure">Tal como lo prescribe el organigrama oficial de la institución, la investigación avanza simétricamente entre ciclos, nutriéndose del asombro infantil hasta desembocar en competencias técnicas avanzadas.</p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--padded-lg stack-md">
+              <div class="card__meta">
+                <span class="badge badge--mint badge--sm"><span class="icon icon--sm" aria-hidden="true">nest_eco_leaf</span>Nivel Inicial</span>
+                <span class="mono text-muted">Ciclo 1 • 0°-5°</span>
+              </div>
+              <h4 class="headline-sm">Transición &amp; Básica Primaria</h4>
+              <ul class="feature-list">
+                <li><span class="icon text-warm-amber" aria-hidden="true">lightbulb</span><p><strong>Curiosidad Como Motor:</strong> Estímulo sensorial, formulación de preguntas espontáneas, exploración del entorno inmediato y juegos de observación.</p></li>
+                <li><span class="icon text-terracotta" aria-hidden="true">favorite</span><p><strong>Gestión de Emociones:</strong> Asombro, trabajo en equipo, empatía y sentido de pertenencia por su escuela y sus compañeros.</p></li>
+              </ul>
+            </article>
+
+            <article class="card card--padded-lg card--ring stack-md">
+              <div class="card__meta">
+                <span class="badge badge--solid badge--sm"><span class="icon icon--sm" aria-hidden="true">menu_book</span>Núcleo Formativo</span>
+                <span class="mono text-primary">Ciclo 2 • 6°-11°</span>
+              </div>
+              <h4 class="headline-sm">Básica Secundaria y Media</h4>
+              <ul class="feature-list">
+                <li><span class="icon text-secondary" aria-hidden="true">flag</span><p><strong>Liderazgo Juvenil:</strong> Capacidad de oratoria, formulación rigurosa de hipótesis, recolección de datos y debate argumentado.</p></li>
+                <li><span class="icon text-primary" aria-hidden="true">military_tech</span><p><strong>Desarrollo de Competencias:</strong> Aplicación directa de los métodos ABP, ABR y protocolo formal científico para la resolución comunitaria.</p></li>
+              </ul>
+            </article>
+
+            <article class="card card--padded-lg stack-md">
+              <div class="card__meta">
+                <span class="badge badge--amber badge--sm"><span class="icon icon--sm" aria-hidden="true">extension</span>Diversidad &amp; Cobertura</span>
+                <span class="mono text-muted">Inclusión BOH</span>
+              </div>
+              <h4 class="headline-sm">Modelos Flexibles &amp; Inclusión</h4>
+              <ul class="feature-list">
+                <li><span class="icon text-secondary" aria-hidden="true">settings_suggest</span><p><strong>Ritmos Adaptados:</strong> Metodologías que se ajustan a las trayectorias de aprendizaje no lineales con proyectos de indagación personalizada.</p></li>
+                <li><span class="icon text-primary" aria-hidden="true">handshake</span><p><strong>Articulación con Aula de Apoyo:</strong> Acompañamiento psicopedagógico especializado para que nadie quede excluido de la creación científica.</p></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDS ===================== -->
+    <section class="section section--white" id="eds-flujo" aria-labelledby="eds-title" data-spy-section>
+      <div class="container stack-2xl">
+        <header class="section-head">
+          <div class="section-head__copy">
+            <p class="eyebrow"><span class="icon" aria-hidden="true">account_tree</span>Metodología de Trabajo</p>
+            <h2 class="headline-lg" id="eds-title">EDS: Estructura Desenglobante del Trabajo</h2>
+            <p class="text-muted">La ruta institucional progresiva que acompaña a los semilleros y aulas desde la primera chispa de duda hasta la gran socialización ante la comunidad.</p>
+          </div>
+          <aside class="callout">
+            <span class="icon icon--md text-secondary" aria-hidden="true">schedule</span>
+            <p><strong>Principio de Flexibilidad:</strong> “El tiempo de cada etapa se define y ajusta según la necesidad pedagógica del docente y el ritmo de los investigadores”.</p>
+          </aside>
+        </header>
+
+        <ol class="steps" aria-label="Fases de la EDS">
+          <li class="step">
+            <div class="stack-sm">
+              <span class="step__num step__num--deep mono">01</span>
+              <span class="icon icon--lg text-secondary" aria-hidden="true">contact_support</span>
+              <h3 class="headline-sm step__title">Explorando a través de la Pregunta</h3>
+              <p class="text-muted text-sm">Fase inicial de asombro. Identificación de problemas sentidos en la cotidianidad escolar y territorial.</p>
+            </div>
+            <ul class="dot-list">
+              <li>Ideas Iniciales</li><li>Mapas Mentales</li><li>Cartografía Social</li>
+            </ul>
+          </li>
+          <li class="step">
+            <div class="stack-sm">
+              <span class="step__num step__num--secondary mono">02</span>
+              <span class="icon icon--lg text-secondary" aria-hidden="true">edit_document</span>
+              <h3 class="headline-sm step__title">Mi Anteproyecto de Investigación</h3>
+              <p class="text-muted text-sm"><em>(Aprendiendo a narrar el cuento)</em>. Formalización de la propuesta, planteamiento del problema y objetivos.</p>
+            </div>
+            <ul class="dot-list">
+              <li>Diseño Metodológico</li><li>Justificación Social</li><li>Cronograma Inicial</li>
+            </ul>
+          </li>
+          <li class="step step--featured">
+            <div class="stack-sm">
+              <span class="step__num step__num--mint mono">03</span>
+              <span class="icon icon--lg" aria-hidden="true">biotech</span>
+              <h3 class="headline-sm step__title">Mi Proyecto de Investigación</h3>
+              <p class="text-sm"><em>(Narrando el cuento)</em>. Salidas de campo, trabajo experimental, recolección de testimonios y análisis de datos.</p>
+            </div>
+            <ul class="dot-list">
+              <li>Procesos Metodológicos</li><li>Bitácoras Escolares</li><li>Hallazgos y Resultados</li>
+            </ul>
+          </li>
+          <li class="step">
+            <div class="stack-sm">
+              <span class="step__num step__num--amber mono">04</span>
+              <span class="icon icon--lg text-amber" aria-hidden="true">record_voice_over</span>
+              <h3 class="headline-sm step__title">Maestros que Narran</h3>
+              <p class="text-muted text-sm">Sistematización docente de las experiencias de aula. El educador como co-investigador pedagógico.</p>
+            </div>
+            <ul class="dot-list dot-list--amber">
+              <li>Cualificación Docente</li><li>Artículos de Práctica</li><li>Diálogos Entre Pares</li>
+            </ul>
+          </li>
+          <li class="step">
+            <div class="stack-sm">
+              <span class="step__num step__num--terracotta mono">05</span>
+              <span class="icon icon--lg text-terracotta" aria-hidden="true">campaign</span>
+              <h3 class="headline-sm step__title">Encuentro CCC</h3>
+              <p class="text-muted text-sm">El hito culmen institucional de socialización: Conocimiento, Creatividad y Convivencia hacia la comunidad.</p>
+            </div>
+            <ul class="dot-list dot-list--terracotta">
+              <li>Conocimiento</li><li>Creatividad</li><li>Convivencia Escolar</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== LÍNEAS DE INVESTIGACIÓN ===================== -->
+    <section class="section section--surface" id="lineas-investigacion" aria-labelledby="lineas-title" data-spy-section>
+      <div class="container stack-2xl">
+        <header class="section-head section-head--narrow">
+          <div class="section-head__copy">
+            <p class="eyebrow eyebrow--amber">Líneas Estratégicas</p>
+            <h2 class="headline-lg" id="lineas-title">Líneas de Investigación Temáticas</h2>
+            <p class="text-muted">Dos grandes pilares definidos por la comunidad educativa para indagar, reflexionar y transformar el territorio de Robledo y la ciudad de Medellín.</p>
+          </div>
+        </header>
+
+        <div class="grid grid--2">
+          <article class="card card--padded card--line card--line-social">
+            <div class="stack-md">
+              <div class="card__meta">
+                <span class="badge badge--mint badge--sm"><span class="icon icon--sm" aria-hidden="true">groups</span>Ciencias Sociales &amp; Humanidades</span>
+                <span class="mono text-muted">LÍNEA SOC-01</span>
+              </div>
+              <h3 class="headline-md">Identidad, ciudadanía crítica y acción colectiva para la transformación del territorio</h3>
+              <p class="text-muted">Aborda los procesos de memoria histórica, resolución de conflictos, cartografía comunitaria, derechos humanos y el fortalecimiento de la participación democrática en los barrios circundantes a la IE Barrio Olaya Herrera.</p>
+              <ul class="focus-grid">
+                <li><span class="icon text-secondary" aria-hidden="true">map</span>Cartografía Barrial Participativa</li>
+                <li><span class="icon text-secondary" aria-hidden="true">auto_stories</span>Memoria Oral de Comuna 7</li>
+                <li><span class="icon text-secondary" aria-hidden="true">diversity_1</span>Convivencia y Cultura de Paz</li>
+                <li><span class="icon text-secondary" aria-hidden="true">how_to_vote</span>Ciudadanía Juvenil Activa</li>
+              </ul>
+            </div>
+            <footer class="card__footer">
+              <span class="text-muted text-sm">Coordinado por el Área de Ciencias Sociales BOH</span>
+              <span class="card__count">8 Proyectos Escritos <span class="icon icon--sm" aria-hidden="true">arrow_forward</span></span>
+            </footer>
+          </article>
+
+          <article class="card card--padded card--line card--line-natural">
+            <div class="stack-md">
+              <div class="card__meta">
+                <span class="badge badge--amber badge--sm"><span class="icon icon--sm" aria-hidden="true">eco</span>Ciencias Naturales &amp; Exactas</span>
+                <span class="mono text-muted">LÍNEA NAT-02</span>
+              </div>
+              <h3 class="headline-md">Ciencia y gestión ambiental escolar para la transformación del territorio</h3>
+              <p class="text-muted">Impulsa la comprensión científica de los ecosistemas urbanos, monitoreo de la calidad del aire, conservación de microcuencas, manejo sustentable de residuos sólidos y agricultura escolar ecológica.</p>
+              <ul class="focus-grid focus-grid--amber">
+                <li><span class="icon text-amber" aria-hidden="true">compost</span>Gestión de Residuos y PRAE</li>
+                <li><span class="icon text-amber" aria-hidden="true">water_drop</span>Monitoreo de Cuencas Locales</li>
+                <li><span class="icon text-amber" aria-hidden="true">air</span>Calidad del Aire y Microclima</li>
+                <li><span class="icon text-amber" aria-hidden="true">yard</span>Huerta Escolar Científica</li>
+              </ul>
+            </div>
+            <footer class="card__footer">
+              <span class="text-muted text-sm">Coordinado por el Área de Ciencias Naturales BOH</span>
+              <span class="card__count">10 Proyectos Escritos <span class="icon icon--sm" aria-hidden="true">arrow_forward</span></span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONVERGENCIA: MEDIA TÉCNICA / SEMILLEROS ===================== -->
+    <section class="section section--white" id="semilleros-media" aria-labelledby="convergen-title" data-spy-section>
+      <div class="container stack-2xl">
+        <header class="section-head section-head--center">
+          <p class="badge badge--solid"><span class="icon icon--sm" aria-hidden="true">merge</span>CONVERGEN</p>
+          <h2 class="headline-lg" id="convergen-title">Media Técnica, Semilleros e Investigación Docente</h2>
+          <p class="text-muted">Punto de encuentro donde el rigor académico se une con la técnica productiva y las experiencias extracurriculares significativas.</p>
+        </header>
+
+        <div class="grid grid--4">
+          <article class="card card--padded-lg card--split card--top-primary">
+            <div class="stack-sm">
+              <span class="icon-tile icon-tile--mint"><span class="icon" aria-hidden="true">school</span></span>
+              <p class="kicker">Articulación Técnica</p>
+              <h3 class="headline-sm">Media Técnica BOH</h3>
+              <p class="text-muted text-sm">Proyectos formativos de grado 10° y 11° vinculados a necesidades reales del sector productivo local.</p>
+            </div>
+            <ul class="mini-list">
+              <li><span class="icon icon--sm" aria-hidden="true">precision_manufacturing</span>Proyecto Productivo</li>
+              <li><span class="icon icon--sm" aria-hidden="true">supervisor_account</span>Proyecto Mentor</li>
+            </ul>
+          </article>
+
+          <article class="card card--padded-lg card--split card--top-amber">
+            <div class="stack-sm">
+              <span class="icon-tile icon-tile--amber"><span class="icon" aria-hidden="true">potted_plant</span></span>
+              <p class="kicker kicker--amber">Vocaciones Tempranas</p>
+              <h3 class="headline-sm">Semilleros BOH</h3>
+              <p class="text-muted text-sm">Espacios extracurriculares de exploración científica guiada por docentes tutores.</p>
+            </div>
+            <ul class="tag-cloud">
+              <li>Semillero STEAM</li><li>Semillero CEA</li><li>Dagantes</li><li>Colegios Verdes</li>
+            </ul>
+          </article>
+
+          <article class="card card--padded-lg card--split card--top-secondary">
+            <div class="stack-sm">
+              <span class="icon-tile icon-tile--high"><span class="icon" aria-hidden="true">menu_book</span></span>
+              <p class="kicker">Docencia Científica</p>
+              <h3 class="headline-sm">Investigación Educativa</h3>
+              <p class="text-muted text-sm">Transformación curricular liderada por el cuerpo de educadores en sus prácticas cotidianas.</p>
+            </div>
+            <ul class="mini-list">
+              <li><span class="icon icon--sm" aria-hidden="true">history_edu</span>Desde la cualificación</li>
+              <li><span class="icon icon--sm" aria-hidden="true">assignment_turned_in</span>Desde las prácticas</li>
+              <li><span class="icon icon--sm" aria-hidden="true">lightbulb</span>Innovación Pedagógica</li>
+            </ul>
+          </article>
+
+          <article class="card card--padded-lg card--split card--top-terracotta">
+            <div class="stack-sm">
+              <span class="icon-tile icon-tile--terracotta"><span class="icon" aria-hidden="true">emoji_events</span></span>
+              <p class="kicker kicker--terracotta">Vida Escolar BOH</p>
+              <h3 class="headline-sm">Exp. Significativas</h3>
+              <p class="text-muted text-sm">Comunidades de práctica que nutren la sensibilidad, el idioma y el bienestar psicofísico.</p>
+            </div>
+            <ul class="mini-list">
+              <li><span class="icon icon--sm" aria-hidden="true">translate</span>Club de Conversación</li>
+              <li><span class="icon icon--sm" aria-hidden="true">library_music</span>Grupo Musical BOH</li>
+              <li><span class="icon icon--sm" aria-hidden="true">favorite</span>Cuerpo Sano, Mente Sana</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SEMILLEROS ACTIVOS (renderizado desde datos) ===================== -->
+    <section class="section section--surface" id="semilleros" aria-labelledby="semilleros-title">
+      <div class="container stack-xl">
+        <header class="section-head">
+          <div class="section-head__copy">
+            <p class="eyebrow eyebrow--amber">Vivero de Conocimiento</p>
+            <h2 class="headline-lg" id="semilleros-title">Semilleros Científicos Activos</h2>
+            <p class="text-muted">Cada semillero atiende una dimensión del saber contemporáneo con tutorías especializadas, laboratorios y participación en eventos como la Feria de la Ciencia de Medellín y Ondas MinCiencias.</p>
+          </div>
+          <button class="btn btn--amber" type="button" data-open-cupos aria-haspopup="dialog">
+            <span class="icon icon--sm" aria-hidden="true">filter_list</span> Ver Resumen de Cupos 2025
+          </button>
+        </header>
+
+        <ul class="grid grid--4" data-semilleros-list aria-live="polite">
+          <!-- Las tarjetas se generan desde js/data/semilleros.data.js -->
+        </ul>
+        <noscript><p class="text-muted">Activa JavaScript para ver el detalle de los semilleros.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ===================== REPOSITORIO + FORMULARIO ===================== -->
+    <section class="section section--white" id="repositorio" aria-labelledby="repo-title" data-spy-section>
+      <div class="container repo-grid">
+        <div class="stack-lg">
+          <header class="stack-xs">
+            <p class="eyebrow">Caja de Herramientas Pedagógicas</p>
+            <h2 class="headline-lg" id="repo-title">Formatos &amp; Repositorio BOH</h2>
+            <p class="text-muted">Descarga las plantillas oficiales para docentes y estudiantes de acuerdo a cada una de las 5 fases de la Estructura Desenglobante (EDS).</p>
+          </header>
+          <ul class="doc-list" data-documents-list>
+            <!-- Los documentos se generan desde js/data/documentos.data.js -->
+          </ul>
+        </div>
+
+        <aside class="info-card" id="contacto" aria-labelledby="contacto-title">
+          <header class="stack-xs">
+            <p class="eyebrow eyebrow--amber"><span class="icon" aria-hidden="true">support_agent</span>Asesoría y Consultoría</p>
+            <h3 class="headline-md" id="contacto-title">¿Tienes una idea de investigación?</h3>
+            <p class="text-muted text-sm">Docentes y estudiantes olavistas pueden acercarse al Centro de Investigación para recibir mentoría y seguimiento metodológico en cada fase de la EDS.</p>
+          </header>
+          <ul class="info-list">
+            <!-- <li><span class="icon text-secondary" aria-hidden="true">mail</span><a href="mailto:investigacion@iebarrioolayaherrera.edu.co">investigacion@iebarrioolayaherrera.edu.co</a></li> -->
+            <!-- <li><span class="icon text-secondary" aria-hidden="true">call</span><a href="tel:+576044212089">+57 (604) 421 20 89</a></li> -->
+            <li><span class="icon text-secondary" aria-hidden="true">schedule</span>Lunes a Viernes, 7:00 am - 4:00 pm</li>
+            <li><span class="icon text-secondary" aria-hidden="true">location_on</span>Carrera 101C No. 58-44 Barrio Olaya Herrera, Comuna 7 Robledo, Medellín</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ENCUENTRO CCC ===================== -->
+    <section class="cta-band" aria-labelledby="ccc-title">
+      <div class="container cta-band__inner">
+        <div class="stack-sm cta-band__copy">
+          <p class="badge badge--amber-solid"><span class="icon icon--sm" aria-hidden="true">event_available</span>Convocatoria Anual</p>
+          <h2 class="headline-lg" id="ccc-title">Gran Encuentro CCC: Conocimiento, Creatividad y Convivencia</h2>
+          <p>El momento en que toda la Institución Educativa Barrio Olaya Herrera abre sus puertas a las familias y al barrio para celebrar la ciencia escolar. ¡Prepara tu ponencia y sé parte de la transformación comunitaria!</p>
+        </div>
+        <div class="cta-band__actions">
+          <a class="btn btn--amber" href="#contacto">Participar con mi Proyecto</a>
+          <a class="btn btn--ghost-light" href="https://iebarrioolayaherrera.edu.co" target="_blank" rel="noopener noreferrer">Portal Institucional<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="stack-md">
+          <div class="brand brand--footer">
+            <img class="brand__logo" src="assets/img/logo.svg" alt="" width="40" height="40">
+            <span class="brand__name">CIE - BOH</span>
+          </div>
+          <p class="text-sm footer-muted">Centro de Investigación Escolar de la Institución Educativa Barrio Olaya Herrera. Semillero de innovación académica, pensamiento crítico y desarrollo tecnológico juvenil.</p>
+          <ul class="badge-row">
+            <li class="badge badge--on-dark badge--sm"><span class="icon icon--sm" aria-hidden="true">verified</span>Calidad Educativa</li>
+            <li class="badge badge--on-dark badge--sm"><span class="icon icon--sm" aria-hidden="true">science</span>Investigación Escolar</li>
+          </ul>
+        </div>
+
+        <nav aria-labelledby="footer-nav-title">
+          <h2 class="footer-title" id="footer-nav-title">Navegación Institucional</h2>
+          <ul class="footer-links">
+            <li><a href="#inicio">Portal de Inicio</a></li>
+            <li><a href="#pei-fundamentos">Misión, Visión, PEI &amp; Objetivos</a></li>
+            <li><a href="#eds-flujo">Estructura Desenglobante del Trabajo (EDS)</a></li>
+            <li><a href="#lineas-investigacion">Líneas Temáticas de Investigación</a></li>
+            <li><a href="#semilleros-media">Semilleros Científicos y Media Técnica</a></li>
+            <li><a href="#repositorio">Repositorio Documental BOH</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-labelledby="footer-ext-title">
+          <h2 class="footer-title" id="footer-ext-title">Enlaces Institución Educativa</h2>
+          <ul class="footer-links" data-external-links>
+            <!-- Generados desde js/config/app.config.js (lista blanca de dominios) -->
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer-title">Sede &amp; Contacto</h2>
+          <address class="contact-list">
+            <p><span class="icon icon--sm" aria-hidden="true">location_on</span>Comuna 7 Robledo, Medellín, Antioquia • Cra. 84 # 57-30</p>
+            <p><span class="icon icon--sm" aria-hidden="true">mail</span><a href="mailto:investigacion@iebarrioolayaherrera.edu.co">investigacion@iebarrioolayaherrera.edu.co</a></p>
+            <p><span class="icon icon--sm" aria-hidden="true">call</span><a href="tel:+576044212089">+57 (604) 421 20 89</a></p>
+            <p><span class="icon icon--sm" aria-hidden="true">schedule</span>Horario CIE: Lunes a Viernes 7:00 am - 4:00 pm</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span data-current-year>2025</span> Centro de Investigación Escolar BOH • IE Barrio Olaya Herrera. Todos los derechos reservados.</p>
+        <ul class="footer-legal">
+          <li><a href="#privacidad" data-open-privacy aria-haspopup="dialog">Política de Privacidad</a></li>
+          <li><a href="#repositorio">Términos del Repositorio Académico</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contenedor de diálogos y notificaciones -->
+  <dialog class="modal" data-modal aria-labelledby="modal-title">
+    <div class="modal__header">
+      <h2 class="headline-sm" id="modal-title" data-modal-title></h2>
+      <button class="icon-btn" type="button" data-modal-close aria-label="Cerrar">
+        <span class="icon" aria-hidden="true">close</span>
+      </button>
+    </div>
+    <div class="modal__body" data-modal-body></div>
+  </dialog>
+
+  <div class="toast-region" data-toast-region role="region" aria-live="polite" aria-label="Notificaciones"></div>
+</body>
+</html>

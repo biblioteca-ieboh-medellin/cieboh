@@ -1,0 +1,62 @@
+/* ==========================================================================
+   Layout: contenedor, secciones, grids y stacks
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max) + 2 * var(--page-margin));
+  margin-inline: auto;
+  padding-inline: var(--page-margin);
+}
+
+main {
+  padding-top: var(--header-height);
+  outline: none;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--space-2xl);
+}
+
+.section--surface { background: var(--color-surface); }
+.section--white { background: var(--color-surface-lowest); }
+
+/* Stacks verticales */
+.stack-xs,
+.stack-sm,
+.stack-md,
+.stack-lg,
+.stack-xl,
+.stack-2xl {
+  display: flex;
+  flex-direction: column;
+}
+.stack-xs { gap: var(--space-xs); }
+.stack-sm { gap: var(--space-sm); }
+.stack-md { gap: var(--space-md); }
+.stack-lg { gap: var(--space-lg); }
+.stack-xl { gap: var(--space-xl); }
+.stack-2xl { gap: var(--space-2xl); }
+
+/* Grids responsivos */
+.grid {
+  display: grid;
+  gap: var(--gutter);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--2,
+  .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .grid--3.grid--3-collapse { grid-template-columns: 1fr; }
+}
+
+.measure { max-width: 48rem; }

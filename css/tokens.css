@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Design tokens — "Academic Forest Research System" (DESIGN.md)
+   Única fuente de verdad para color, tipografía, espaciado, radios y sombras.
+   ========================================================================== */
+:root {
+  /* Color: marca */
+  --color-primary: #1b4332;
+  --color-primary-strong: #012d1d;
+  --color-forest-deep: #081c15;
+  --color-secondary: #116c4a;
+  --color-scholar: #40916c;
+  --color-emerald: #2d6a4f;
+  --color-mint-bright: #52b788;
+  --color-mint-subtle: #d8f3dc;
+  --color-secondary-fixed: #a1f4c8;
+  --color-amber: #d97706;
+  --color-warm-amber: #f4a261;
+  --color-amber-soft: rgba(244, 162, 97, 0.18);
+  --color-terracotta: #e07a5f;
+  --color-tertiary-container: #5e3000;
+
+  /* Color: superficies y texto */
+  --color-bg: #f8fafc;
+  --color-surface: #f8f9ff;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #eff4ff;
+  --color-surface-container: #e6eeff;
+  --color-surface-high: #dde9ff;
+  --color-text: #0d1c2f;
+  --color-text-muted: #414844;
+  --color-text-subtle: #64748b;
+  --color-on-primary: #ffffff;
+  --color-border: rgba(51, 65, 85, 0.08);
+  --color-border-strong: #cbd5e1;
+  --color-divider: #f1f5f9;
+  --color-error: #ba1a1a;
+  --color-error-soft: #ffdad6;
+  --color-archived: #e2e8f0;
+
+  /* Tipografía */
+  --font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Public Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --fs-display: 3.5rem;
+  --lh-display: 4rem;
+  --fs-headline-lg: 2.25rem;
+  --lh-headline-lg: 2.75rem;
+  --fs-headline-md: 1.75rem;
+  --lh-headline-md: 2.25rem;
+  --fs-headline-sm: 1.25rem;
+  --lh-headline-sm: 1.75rem;
+  --fs-body-lg: 1.125rem;
+  --fs-body-md: 1rem;
+  --fs-body-sm: 0.875rem;
+  --fs-label-md: 0.875rem;
+  --fs-label-sm: 0.75rem;
+  --fs-code: 0.8125rem;
+
+  /* Espaciado (ritmo 8pt) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --gutter: 1.5rem;
+  --page-margin: 2.5rem;
+  --container-max: 80rem;
+
+  /* Radios */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Elevación */
+  --shadow-1: 0 1px 3px 0 rgba(8, 28, 21, 0.04), 0 1px 2px -1px rgba(8, 28, 21, 0.03);
+  --shadow-2: 0 10px 15px -3px rgba(27, 67, 50, 0.08), 0 4px 6px -4px rgba(27, 67, 50, 0.04);
+  --shadow-3: 0 20px 25px -5px rgba(8, 28, 21, 0.12), 0 8px 10px -6px rgba(8, 28, 21, 0.08);
+  --focus-ring: 0 0 0 4px rgba(64, 145, 108, 0.15);
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur: 200ms;
+
+  /* Layout */
+  --header-height: 7.25rem;
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --page-margin: 2rem;
+    --gutter: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fs-display: 2.25rem;
+    --lh-display: 2.75rem;
+    --fs-headline-lg: 1.75rem;
+    --lh-headline-lg: 2.25rem;
+    --fs-headline-md: 1.5rem;
+    --lh-headline-md: 2rem;
+    --page-margin: 1rem;
+    --gutter: 1rem;
+    --header-height: 6.25rem;
+  }
+}
