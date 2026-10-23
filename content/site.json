@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Centro de Investigación Escolar BOH"
+  },
+  "topbar": {
+    "icon": "account_balance",
+    "text": "Institución Educativa Barrio Olaya Herrera • Medellín, Colombia",
+    "link": {
+      "label": "Portal Institucional Principal",
+      "href": "https://iebarrioolayaherrera.edu.co",
+      "icon": "north_east"
+    }
+  },
+  "brand": {
+    "name": "Centro de Investigación BOH",
+    "tagline": "IE Barrio Olaya Herrera • Excelencia y Ciencia",
+    "homeLabel": "Centro de Investigación BOH, ir al inicio",
+    "homeHref": "#inicio"
+  },
+  "nav": {
+    "label": "Navegación principal",
+    "items": [
+      { "label": "Inicio", "href": "#inicio" },
+      { "label": "Generalidades", "href": "#pei-fundamentos" },
+      { "label": "Estructura (EDS)", "href": "#eds-flujo" },
+      { "label": "Líneas de Investigación", "href": "#lineas-investigacion" },
+      { "label": "Semilleros & Media Técnica", "href": "#semilleros-media" },
+      { "label": "Repositorio & Contacto", "href": "#repositorio" }
+    ]
+  },
+  "anchorHub": {
+    "label": "Accesos rápidos",
+    "icon": "account_tree",
+    "version": "CIE-BOH v2025.1",
+    "status": "Estructura Desenglobante del Trabajo (EDS) Activa",
+    "links": [
+      { "label": "Marco PEI", "href": "#pei-fundamentos", "icon": "school" },
+      { "label": "Ruta Metodológica EDS", "href": "#eds-flujo", "icon": "schema" },
+      { "label": "Líneas de Territorio", "href": "#lineas-investigacion", "icon": "biotech" },
+      { "label": "Semilleros & Media Técnica", "href": "#semilleros-media", "icon": "psychology" }
+    ]
+  },
+  "ui": {
+    "skipLink": "Saltar al contenido principal",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú",
+    "close": "Cerrar",
+    "closeNotification": "Cerrar notificación",
+    "notifications": "Notificaciones",
+    "newTab": "(se abre en una pestaña nueva)",
+    "linkPending": "(enlace por confirmar)",
+    "sectionError": "No se pudo cargar esta sección. Intenta recargar la página."
+  }
+}

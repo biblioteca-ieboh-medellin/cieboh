@@ -1,0 +1,65 @@
+{
+  "eyebrow": { "label": "Fundamentación Pedagógica" },
+  "title": "Horizonte Institucional & Marco PEI Olavista",
+  "intro": "La investigación en la Institución Educativa Barrio Olaya Herrera no es un fin en sí misma; es la palanca formadora que ubica a los niños, niñas y jóvenes en el epicentro de su aprendizaje.",
+  "pill": { "icon": "verified_user", "label": "Acreditación Institucional IE Barrio Olaya Herrera" },
+  "pillars": [
+    {
+      "icon": "flag",
+      "tile": "mint",
+      "title": "Misión Formativa",
+      "text": "Fomentar el pensamiento crítico, la curiosidad científica y la capacidad de transformación social en la comunidad olavista, a través de metodologías activas y la investigación formativa contextualizada en su territorio.",
+      "foot": { "icon": "check_circle", "label": "Formación Holística Ciudadana" }
+    },
+    {
+      "icon": "visibility",
+      "tile": "high",
+      "title": "Visión Prospectiva",
+      "text": "Consolidar al Centro de Investigación Escolar BOH como un polo de innovación educativa y divulgación científica en Medellín para 2030, donde cada estudiante egrese con competencias investigativas de alto impacto real.",
+      "foot": { "icon": "trending_up", "label": "Liderazgo Científico en Robledo" }
+    },
+    {
+      "icon": "groups_3",
+      "tile": "mint-bright",
+      "variant": "inverse",
+      "title": "Aula de Apoyo & Inclusión",
+      "text": "Garantizamos la articulación de los Modelos Flexibles y el Aula de Apoyo pedagógico, permitiendo que la ciencia y la indagación sean inclusivas, diversas y accesibles para todos los ritmos y talentos escolares.",
+      "foot": { "icon": "accessibility_new", "label": "Diversidad, Equidad y Cobertura" }
+    }
+  ],
+  "levels": {
+    "eyebrow": { "label": "Estructura por Niveles Educativos", "icon": "psychology_alt", "variant": "primary" },
+    "title": "Despliegue del Organigrama: De la Curiosidad Inicial al Liderazgo Productivo",
+    "intro": "Tal como lo prescribe el organigrama oficial de la institución, la investigación avanza simétricamente entre ciclos, nutriéndose del asombro infantil hasta desembocar en competencias técnicas avanzadas.",
+    "items": [
+      {
+        "badge": { "label": "Nivel Inicial", "icon": "nest_eco_leaf", "variant": "mint" },
+        "cycle": "Ciclo 1 • 0°-5°",
+        "title": "Transición & Básica Primaria",
+        "features": [
+          { "icon": "lightbulb", "tone": "warm-amber", "title": "Curiosidad Como Motor:", "text": "Estímulo sensorial, formulación de preguntas espontáneas, exploración del entorno inmediato y juegos de observación." },
+          { "icon": "favorite", "tone": "terracotta", "title": "Gestión de Emociones:", "text": "Asombro, trabajo en equipo, empatía y sentido de pertenencia por su escuela y sus compañeros." }
+        ]
+      },
+      {
+        "badge": { "label": "Núcleo Formativo", "icon": "menu_book", "variant": "solid" },
+        "cycle": "Ciclo 2 • 6°-11°",
+        "highlighted": true,
+        "title": "Básica Secundaria y Media",
+        "features": [
+          { "icon": "flag", "tone": "secondary", "title": "Liderazgo Juvenil:", "text": "Capacidad de oratoria, formulación rigurosa de hipótesis, recolección de datos y debate argumentado." },
+          { "icon": "military_tech", "tone": "primary", "title": "Desarrollo de Competencias:", "text": "Aplicación directa de los métodos ABP, ABR y protocolo formal científico para la resolución comunitaria." }
+        ]
+      },
+      {
+        "badge": { "label": "Diversidad & Cobertura", "icon": "extension", "variant": "amber" },
+        "cycle": "Inclusión BOH",
+        "title": "Modelos Flexibles & Inclusión",
+        "features": [
+          { "icon": "settings_suggest", "tone": "secondary", "title": "Ritmos Adaptados:", "text": "Metodologías que se ajustan a las trayectorias de aprendizaje no lineales con proyectos de indagación personalizada." },
+          { "icon": "handshake", "tone": "primary", "title": "Articulación con Aula de Apoyo:", "text": "Acompañamiento psicopedagógico especializado para que nadie quede excluido de la creación científica." }
+        ]
+      }
+    ]
+  }
+}

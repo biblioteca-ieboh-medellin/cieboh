@@ -556,6 +556,45 @@
   .cta-band__actions { flex-shrink: 0; }
 }
 
+/* ---------- Carga de contenido (JSON) ---------- */
+/* Mientras se pintan las secciones, el pie se oculta para que no "salte" (CLS = 0).
+   Si el JavaScript fallara, la animación lo revela igualmente tras 4 s. */
+.is-loading .site-footer {
+  visibility: hidden;
+  animation: reveal-fallback 0s linear 4s forwards;
+}
+@keyframes reveal-fallback {
+  to { visibility: visible; }
+}
+
+.section-error {
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  background: var(--color-error-soft);
+  color: var(--color-error);
+  font-weight: 600;
+}
+
+.noscript-note {
+  margin: calc(var(--header-height) + var(--space-md)) var(--page-margin) 0;
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  background: var(--color-amber-soft);
+  color: var(--color-forest-deep);
+}
+.noscript-note a { text-decoration: underline; }
+
+.link-pending { opacity: 0.75; }
+
+.link-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+}
+.link-button:hover { color: #fff; text-decoration: underline; }
+
 /* ---------- Página 404 ---------- */
 .not-found {
   display: flex;

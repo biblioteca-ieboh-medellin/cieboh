@@ -8,11 +8,12 @@ const ICONS = Object.freeze({ success: 'check_circle', info: 'info', error: 'err
 export class ToastNotifier {
   /**
    * @param {HTMLElement} region
-   * @param {{ durationMs: number }} options
+   * @param {{ durationMs: number, closeLabel: string }} options
    */
-  constructor(region, { durationMs }) {
+  constructor(region, { durationMs, closeLabel }) {
     this.region = region;
     this.durationMs = durationMs;
+    this.closeLabel = closeLabel;
   }
 
   /**
@@ -21,9 +22,9 @@ export class ToastNotifier {
    */
   show(message, type = 'info') {
     if (!this.region) return;
-    const variant = ICONS[type] ? type : 'info';
+    const variant = Object.hasOwn(ICONS, type) ? type : 'info';
 
-    const closeBtn = h('button', { className: 'toast__close', attrs: { type: 'button', 'aria-label': 'Cerrar notificación' } }, [
+    const closeBtn = h('button', { className: 'toast__close', attrs: { type: 'button', 'aria-label': this.closeLabel } }, [
       icon('close', 'icon--sm'),
     ]);
     const toast = h('div', { className: `toast toast--${variant}`, attrs: { role: variant === 'error' ? 'alert' : 'status' } }, [

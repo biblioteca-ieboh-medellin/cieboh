@@ -1,0 +1,66 @@
+{
+  "eyebrow": { "label": "Vivero de Conocimiento", "variant": "amber" },
+  "title": "Semilleros Científicos Activos",
+  "intro": "Cada semillero atiende una dimensión del saber contemporáneo con tutorías especializadas, laboratorios y participación en eventos como la Feria de la Ciencia de Medellín y Ondas MinCiencias.",
+  "summaryButton": { "label": "Ver Resumen de Cupos 2025", "icon": "filter_list" },
+  "labels": {
+    "levels": "Niveles:",
+    "schedule": "Día de trabajo:",
+    "quota": "{enrolled}/{capacity} Estudiantes activos",
+    "progress": "Cupos ocupados en {name}"
+  },
+  "summary": {
+    "title": "Convocatoria Semilleros BOH 2025",
+    "intro": "Hay {enrolled} estudiantes activos y {available} cupos disponibles en total.",
+    "caption": "Cupos por semillero",
+    "columns": ["Semillero", "Inscritos", "Cupos", "Libres"],
+    "totalLabel": "Total",
+    "note": "Requisitos: compromiso de asistencia semanal y acompañamiento de un docente asesor."
+  },
+  "items": [
+    {
+      "id": "steam",
+      "code": "STEAM-BOH",
+      "icon": "smart_toy",
+      "name": "Semillero STEAM",
+      "description": "Robótica educativa, programación en microcontroladores, domótica de bajo costo y física recreativa aplicada a soluciones del aula.",
+      "levels": "7° a 11°",
+      "schedule": "Miércoles 2:00 pm",
+      "enrolled": 24,
+      "capacity": 30
+    },
+    {
+      "id": "cea",
+      "code": "CEA-BOH",
+      "icon": "psychology",
+      "name": "Semillero CEA",
+      "description": "Centro de Experimentación y Aprendizaje: estudios astronómicos básicos, experimentos de química verde y debates de filosofía de la ciencia.",
+      "levels": "6° a 9°",
+      "schedule": "Jueves 1:30 pm",
+      "enrolled": 22,
+      "capacity": 30
+    },
+    {
+      "id": "dagantes",
+      "code": "DAGANTES",
+      "icon": "menu_book",
+      "name": "Dagantes BOH",
+      "description": "Indagación literaria, periodismo escolar digital, oratoria y crónicas de memoria histórica comunitaria del barrio Olaya Herrera.",
+      "levels": "5° a 11°",
+      "schedule": "Viernes 2:30 pm",
+      "enrolled": 18,
+      "capacity": 25
+    },
+    {
+      "id": "verdes",
+      "code": "VERDES",
+      "icon": "forest",
+      "name": "Colegios Verdes",
+      "description": "Liderazgo en gestión ambiental comunitaria, jardines para polinizadores, compostaje institucional y mitigación del cambio climático.",
+      "levels": "Primaria y Bachillerato",
+      "schedule": "Martes 1:30 pm",
+      "enrolled": 28,
+      "capacity": 30
+    }
+  ]
+}

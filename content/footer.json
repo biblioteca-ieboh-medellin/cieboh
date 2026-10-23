@@ -1,0 +1,52 @@
+{
+  "brandName": "CIE - BOH",
+  "description": "Centro de Investigación Escolar de la Institución Educativa Barrio Olaya Herrera. Semillero de innovación académica, pensamiento crítico y desarrollo tecnológico juvenil.",
+  "badges": [
+    { "label": "Calidad Educativa", "icon": "verified", "variant": "on-dark" },
+    { "label": "Investigación Escolar", "icon": "science", "variant": "on-dark" }
+  ],
+  "columns": [
+    {
+      "title": "Navegación Institucional",
+      "links": [
+        { "label": "Portal de Inicio", "href": "#inicio" },
+        { "label": "Misión, Visión, PEI & Objetivos", "href": "#pei-fundamentos" },
+        { "label": "Estructura Desenglobante del Trabajo (EDS)", "href": "#eds-flujo" },
+        { "label": "Líneas Temáticas de Investigación", "href": "#lineas-investigacion" },
+        { "label": "Semilleros Científicos y Media Técnica", "href": "#semilleros-media" },
+        { "label": "Repositorio Documental BOH", "href": "#repositorio" }
+      ]
+    },
+    {
+      "title": "Enlaces Institución Educativa",
+      "links": [
+        { "label": "Página Oficial IE Barrio Olaya Herrera", "href": "https://iebarrioolayaherrera.edu.co" },
+        { "label": "Master2000 • Plataforma Académica", "href": null },
+        { "label": "Secretaría de Educación de Medellín", "href": "https://www.medellin.gov.co/es/secretaria-de-educacion/" },
+        { "label": "MinCiencias Programa Ondas", "href": "https://minciencias.gov.co/" },
+        { "label": "Manual de Convivencia Institucional", "href": null }
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Sede & Contacto",
+    "items": [
+      { "icon": "location_on", "label": "Comuna 7 Robledo, Medellín, Antioquia • Cra. 84 # 57-30" },
+      { "icon": "mail", "label": "investigacion@iebarrioolayaherrera.edu.co", "href": "mailto:investigacion@iebarrioolayaherrera.edu.co" },
+      { "icon": "call", "label": "+57 (604) 421 20 89", "href": "tel:+576044212089" },
+      { "icon": "schedule", "label": "Horario CIE: Lunes a Viernes 7:00 am - 4:00 pm" }
+    ]
+  },
+  "copyright": "© {year} Centro de Investigación Escolar BOH • IE Barrio Olaya Herrera. Todos los derechos reservados.",
+  "legal": [
+    { "label": "Política de Privacidad", "action": "privacy" },
+    { "label": "Términos del Repositorio Académico", "href": "#repositorio" }
+  ],
+  "privacy": {
+    "title": "Política de Privacidad",
+    "paragraphs": [
+      "Este portal es exclusivamente informativo: no tiene formularios, no usa cookies y no recopila ni almacena datos personales de sus visitantes."
+    ],
+    "note": "Para consultas sobre el tratamiento de datos personales (Ley 1581 de 2012) escribe a investigacion@iebarrioolayaherrera.edu.co."
+  }
+}

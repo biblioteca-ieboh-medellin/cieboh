@@ -1,0 +1,54 @@
+{
+  "eyebrow": { "label": "Metodología de Trabajo", "icon": "account_tree" },
+  "title": "EDS: Estructura Desenglobante del Trabajo",
+  "intro": "La ruta institucional progresiva que acompaña a los semilleros y aulas desde la primera chispa de duda hasta la gran socialización ante la comunidad.",
+  "callout": {
+    "icon": "schedule",
+    "title": "Principio de Flexibilidad:",
+    "text": "“El tiempo de cada etapa se define y ajusta según la necesidad pedagógica del docente y el ritmo de los investigadores”."
+  },
+  "stepsLabel": "Fases de la EDS",
+  "steps": [
+    {
+      "number": "01",
+      "variant": "deep",
+      "icon": "contact_support",
+      "title": "Explorando a través de la Pregunta",
+      "description": ["Fase inicial de asombro. Identificación de problemas sentidos en la cotidianidad escolar y territorial."],
+      "bullets": ["Ideas Iniciales", "Mapas Mentales", "Cartografía Social"]
+    },
+    {
+      "number": "02",
+      "variant": "secondary",
+      "icon": "edit_document",
+      "title": "Mi Anteproyecto de Investigación",
+      "description": [{ "em": "(Aprendiendo a narrar el cuento)" }, ". Formalización de la propuesta, planteamiento del problema y objetivos."],
+      "bullets": ["Diseño Metodológico", "Justificación Social", "Cronograma Inicial"]
+    },
+    {
+      "number": "03",
+      "variant": "mint",
+      "featured": true,
+      "icon": "biotech",
+      "title": "Mi Proyecto de Investigación",
+      "description": [{ "em": "(Narrando el cuento)" }, ". Salidas de campo, trabajo experimental, recolección de testimonios y análisis de datos."],
+      "bullets": ["Procesos Metodológicos", "Bitácoras Escolares", "Hallazgos y Resultados"]
+    },
+    {
+      "number": "04",
+      "variant": "amber",
+      "icon": "record_voice_over",
+      "title": "Maestros que Narran",
+      "description": ["Sistematización docente de las experiencias de aula. El educador como co-investigador pedagógico."],
+      "bullets": ["Cualificación Docente", "Artículos de Práctica", "Diálogos Entre Pares"]
+    },
+    {
+      "number": "05",
+      "variant": "terracotta",
+      "icon": "campaign",
+      "title": "Encuentro CCC",
+      "description": ["El hito culmen institucional de socialización: Conocimiento, Creatividad y Convivencia hacia la comunidad."],
+      "bullets": ["Conocimiento", "Creatividad", "Convivencia Escolar"]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "badge": { "label": "CONVERGEN", "icon": "merge" },
+  "title": "Media Técnica, Semilleros e Investigación Docente",
+  "intro": "Punto de encuentro donde el rigor académico se une con la técnica productiva y las experiencias extracurriculares significativas.",
+  "blocks": [
+    {
+      "variant": "primary",
+      "icon": "school",
+      "tile": "mint",
+      "kicker": "Articulación Técnica",
+      "title": "Media Técnica BOH",
+      "text": "Proyectos formativos de grado 10° y 11° vinculados a necesidades reales del sector productivo local.",
+      "items": [
+        { "icon": "precision_manufacturing", "label": "Proyecto Productivo" },
+        { "icon": "supervisor_account", "label": "Proyecto Mentor" }
+      ]
+    },
+    {
+      "variant": "amber",
+      "icon": "potted_plant",
+      "tile": "amber",
+      "kicker": "Vocaciones Tempranas",
+      "title": "Semilleros BOH",
+      "text": "Espacios extracurriculares de exploración científica guiada por docentes tutores.",
+      "tags": ["Semillero STEAM", "Semillero CEA", "Dagantes", "Colegios Verdes"]
+    },
+    {
+      "variant": "secondary",
+      "icon": "menu_book",
+      "tile": "high",
+      "kicker": "Docencia Científica",
+      "title": "Investigación Educativa",
+      "text": "Transformación curricular liderada por el cuerpo de educadores en sus prácticas cotidianas.",
+      "items": [
+        { "icon": "history_edu", "label": "Desde la cualificación" },
+        { "icon": "assignment_turned_in", "label": "Desde las prácticas" },
+        { "icon": "lightbulb", "label": "Innovación Pedagógica" }
+      ]
+    },
+    {
+      "variant": "terracotta",
+      "icon": "emoji_events",
+      "tile": "terracotta",
+      "kicker": "Vida Escolar BOH",
+      "title": "Exp. Significativas",
+      "text": "Comunidades de práctica que nutren la sensibilidad, el idioma y el bienestar psicofísico.",
+      "items": [
+        { "icon": "translate", "label": "Club de Conversación" },
+        { "icon": "library_music", "label": "Grupo Musical BOH" },
+        { "icon": "favorite", "label": "Cuerpo Sano, Mente Sana" }
+      ]
+    }
+  ]
+}

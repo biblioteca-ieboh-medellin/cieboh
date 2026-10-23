@@ -1,7 +1,7 @@
 /**
- * Configuración central de la aplicación.
- * Todo valor "mágico" vive aquí para que los módulos no lo dupliquen.
- * Object.freeze evita que otros módulos alteren la configuración en tiempo de ejecución.
+ * Configuración técnica y de seguridad de la aplicación.
+ * El CONTENIDO (textos, etiquetas, enlaces) vive en /content/*.json;
+ * aquí solo están las reglas que el contenido no puede cambiar (listas blancas, límites).
  */
 const deepFreeze = (obj) => {
   Object.values(obj).forEach((value) => {
@@ -11,29 +11,17 @@ const deepFreeze = (obj) => {
 };
 
 export const APP_CONFIG = deepFreeze({
-  documents: {
-    /** Solo se permiten descargas desde esta carpeta del propio sitio. */
-    allowedPathPrefix: 'assets/docs/',
+  content: {
+    baseUrl: 'content/',
+    /** Tamaño máximo aceptado por archivo JSON (defensa ante archivos corruptos). */
+    maxBytes: 200 * 1024,
   },
 
-  contact: {
-    email: 'investigacion@iebarrioolayaherrera.edu.co',
-  },
-
-  /** Lista blanca de dominios externos a los que el sitio puede enlazar. */
-  externalLinks: {
-    allowedHosts: [
-      'iebarrioolayaherrera.edu.co',
-      'www.medellin.gov.co',
-      'minciencias.gov.co',
-    ],
-    items: [
-      { label: 'Página Oficial IE Barrio Olaya Herrera', url: 'https://iebarrioolayaherrera.edu.co' },
-      { label: 'Master2000 • Plataforma Académica', url: null },
-      { label: 'Secretaría de Educación de Medellín', url: 'https://www.medellin.gov.co/es/secretaria-de-educacion/' },
-      { label: 'MinCiencias Programa Ondas', url: 'https://minciencias.gov.co/' },
-      { label: 'Manual de Convivencia Institucional', url: null },
-    ],
+  links: {
+    /** Dominios externos a los que el contenido puede enlazar (solo https). */
+    allowedHosts: ['iebarrioolayaherrera.edu.co', 'www.medellin.gov.co', 'minciencias.gov.co'],
+    /** Única carpeta desde la que se permiten descargas. */
+    downloadPrefix: 'assets/docs/',
   },
 
   scrollSpy: {
@@ -43,4 +31,7 @@ export const APP_CONFIG = deepFreeze({
   toast: {
     durationMs: 6000,
   },
+
+  /** Media query a partir de la cual el menú deja de ser desplegable. */
+  desktopNavQuery: '(min-width: 1280px)',
 });

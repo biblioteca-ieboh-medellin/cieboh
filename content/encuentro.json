@@ -1,0 +1,9 @@
+{
+  "badge": { "label": "Convocatoria Anual", "icon": "event_available", "variant": "amber-solid" },
+  "title": "Gran Encuentro CCC: Conocimiento, Creatividad y Convivencia",
+  "text": "El momento en que toda la Institución Educativa Barrio Olaya Herrera abre sus puertas a las familias y al barrio para celebrar la ciencia escolar. ¡Prepara tu ponencia y sé parte de la transformación comunitaria!",
+  "actions": [
+    { "label": "Participar con mi Proyecto", "href": "#contacto", "variant": "amber" },
+    { "label": "Portal Institucional", "href": "https://iebarrioolayaherrera.edu.co", "variant": "ghost-light" }
+  ]
+}

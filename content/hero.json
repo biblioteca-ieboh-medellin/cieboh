@@ -1,0 +1,41 @@
+{
+  "badgesLabel": "Enfoque pedagógico",
+  "badges": [
+    { "label": "Modelo Social Constructivista", "icon": "psychology", "variant": "solid" },
+    { "label": "Aprender Descubriendo", "icon": "explore", "variant": "mint" },
+    { "label": "Metodologías Activas: ABP • ABR • Pregunta Problematizadora", "icon": "bubble_chart", "variant": "neutral", "iconTone": "terracotta" }
+  ],
+  "eyebrow": "Organigrama Científico Escolar",
+  "title": ["El Ser como Centro de la ", { "accent": "Investigación Escolar" }],
+  "lead": [
+    "Centro de Investigación BOH de la ",
+    { "strong": "Institución Educativa Barrio Olaya Herrera" },
+    ". Un ecosistema pedagógico donde la curiosidad se transforma en rigor científico, soberanía comunitaria y acción colectiva para el territorio de Robledo y Medellín."
+  ],
+  "actions": [
+    { "label": "Explorar Estructura EDS", "href": "#eds-flujo", "icon": "south", "variant": "primary" },
+    { "label": "Líneas de Territorio", "href": "#lineas-investigacion", "icon": "travel_explore", "variant": "soft" },
+    { "label": "Guías y Formatos", "href": "#repositorio", "icon": "folder_special", "iconFirst": true, "variant": "amber-soft" }
+  ],
+  "emblem": {
+    "title": "Matriz PEI Olavista",
+    "icon": "hub",
+    "tag": "2025",
+    "description": "Diagrama del PEI: el Ser en el centro, conectado con la curiosidad, el liderazgo y las ramas EDS, Media Técnica y Ciencia.",
+    "diagram": {
+      "core": "EL SER EN EL CENTRO",
+      "top": "PEI BOH",
+      "left": "Curiosidad",
+      "right": "Liderazgo",
+      "bottom": ["EDS", "MEDIA", "CIENCIA"]
+    },
+    "foot": { "icon": "diversity_3", "label": "Comunidad Educativa", "value": "Transición a 11°" }
+  },
+  "metricsLabel": "Indicadores de impacto",
+  "metrics": [
+    { "icon": "science", "tone": "secondary", "tag": "Fase 2025", "value": "+18", "label": "Proyectos Activos de Aula" },
+    { "icon": "potted_plant", "tone": "amber", "tag": "Semilleros", "value": "4", "label": "Semilleros Vocacionales BOH" },
+    { "icon": "public", "tone": "mint", "tag": "Territorio", "value": "2", "label": "Líneas de Transformación Local" },
+    { "icon": "handshake", "tone": "primary", "tag": "Articulación", "value": "100%", "label": "Media Técnica & Proyectos Mentores" }
+  ]
+}

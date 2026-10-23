@@ -1,0 +1,37 @@
+{
+  "eyebrow": { "label": "Líneas Estratégicas", "variant": "amber" },
+  "title": "Líneas de Investigación Temáticas",
+  "intro": "Dos grandes pilares definidos por la comunidad educativa para indagar, reflexionar y transformar el territorio de Robledo y la ciudad de Medellín.",
+  "lines": [
+    {
+      "variant": "social",
+      "badge": { "label": "Ciencias Sociales & Humanidades", "icon": "groups", "variant": "mint" },
+      "code": "LÍNEA SOC-01",
+      "title": "Identidad, ciudadanía crítica y acción colectiva para la transformación del territorio",
+      "description": "Aborda los procesos de memoria histórica, resolución de conflictos, cartografía comunitaria, derechos humanos y el fortalecimiento de la participación democrática en los barrios circundantes a la IE Barrio Olaya Herrera.",
+      "focus": [
+        { "icon": "map", "label": "Cartografía Barrial Participativa" },
+        { "icon": "auto_stories", "label": "Memoria Oral de Comuna 7" },
+        { "icon": "diversity_1", "label": "Convivencia y Cultura de Paz" },
+        { "icon": "how_to_vote", "label": "Ciudadanía Juvenil Activa" }
+      ],
+      "coordinator": "Coordinado por el Área de Ciencias Sociales BOH",
+      "count": "8 Proyectos Escritos"
+    },
+    {
+      "variant": "natural",
+      "badge": { "label": "Ciencias Naturales & Exactas", "icon": "eco", "variant": "amber" },
+      "code": "LÍNEA NAT-02",
+      "title": "Ciencia y gestión ambiental escolar para la transformación del territorio",
+      "description": "Impulsa la comprensión científica de los ecosistemas urbanos, monitoreo de la calidad del aire, conservación de microcuencas, manejo sustentable de residuos sólidos y agricultura escolar ecológica.",
+      "focus": [
+        { "icon": "compost", "label": "Gestión de Residuos y PRAE" },
+        { "icon": "water_drop", "label": "Monitoreo de Cuencas Locales" },
+        { "icon": "air", "label": "Calidad del Aire y Microclima" },
+        { "icon": "yard", "label": "Huerta Escolar Científica" }
+      ],
+      "coordinator": "Coordinado por el Área de Ciencias Naturales BOH",
+      "count": "10 Proyectos Escritos"
+    }
+  ]
+}
