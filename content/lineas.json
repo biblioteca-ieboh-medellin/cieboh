@@ -5,7 +5,7 @@
   "lines": [
     {
       "variant": "social",
-      "badge": { "label": "Ciencias Sociales & Humanidades", "icon": "groups", "variant": "mint" },
+      "badge": { "label": "Ciencias Sociales & Humanas", "icon": "groups", "variant": "mint" },
       "code": "LÍNEA SOC-01",
       "title": "Identidad, ciudadanía crítica y acción colectiva para la transformación del territorio",
       "description": "Aborda los procesos de memoria histórica, resolución de conflictos, cartografía comunitaria, derechos humanos y el fortalecimiento de la participación democrática en los barrios circundantes a la IE Barrio Olaya Herrera.",
@@ -16,7 +16,7 @@
         { "icon": "how_to_vote", "label": "Ciudadanía Juvenil Activa" }
       ],
       "coordinator": "Coordinado por el Área de Ciencias Sociales BOH",
-      "count": "8 Proyectos Escritos"
+      "count": ""
     },
     {
       "variant": "natural",
@@ -26,12 +26,10 @@
       "description": "Impulsa la comprensión científica de los ecosistemas urbanos, monitoreo de la calidad del aire, conservación de microcuencas, manejo sustentable de residuos sólidos y agricultura escolar ecológica.",
       "focus": [
         { "icon": "compost", "label": "Gestión de Residuos y PRAE" },
-        { "icon": "water_drop", "label": "Monitoreo de Cuencas Locales" },
-        { "icon": "air", "label": "Calidad del Aire y Microclima" },
-        { "icon": "yard", "label": "Huerta Escolar Científica" }
+        { "icon": "yard", "label": "Huerta Escolar" }
       ],
       "coordinator": "Coordinado por el Área de Ciencias Naturales BOH",
-      "count": "10 Proyectos Escritos"
+      "count": ""
     }
   ]
 }
