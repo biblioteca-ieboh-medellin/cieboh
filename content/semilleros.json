@@ -34,20 +34,20 @@
       "code": "CEA-BOH",
       "icon": "psychology",
       "name": "Semillero CEA",
-      "description": "Centro de Experimentación y Aprendizaje: estudios astronómicos básicos, experimentos de química verde y debates de filosofía de la ciencia.",
-      "levels": "6° a 9°",
-      "schedule": "Jueves 1:30 pm",
-      "enrolled": 22,
-      "capacity": 30
+      "description": "Centro de Experimentación y Aprendizaje: experimentos de química verde y debates de filosofía de la ciencia.",
+      "levels": "6° a 11°",
+      "schedule": "Cada 15 días",
+      "enrolled": 12,
+      "capacity": 12
     },
     {
       "id": "dagantes",
       "code": "DAGANTES",
       "icon": "menu_book",
       "name": "Dagantes BOH",
-      "description": "Indagación literaria, periodismo escolar digital, oratoria y crónicas de memoria histórica comunitaria del barrio Olaya Herrera.",
-      "levels": "5° a 11°",
-      "schedule": "Viernes 2:30 pm",
+      "description": "Indagación, exploración y aprendizajes sobre conceptos básicos de metodologías de investigación.",
+      "levels": "6° a 11°",
+      "schedule": "Viernes 7:00 am",
       "enrolled": 18,
       "capacity": 25
     },
